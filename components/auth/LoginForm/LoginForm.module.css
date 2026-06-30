@@ -1,0 +1,139 @@
+.authContainer {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.logoBadge {
+  width: 40px;
+  height: 40px;
+  background: var(--color-on-background);
+  color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  font-size: var(--typo-title-medium-font-size);
+}
+
+.title {
+  font-size: var(--typo-headline-small-font-size);
+  font-weight: 700;
+  color: var(--color-on-background);
+  letter-spacing: -0.01em;
+}
+
+.description {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-on-surface-variant);
+}
+
+.backButton {
+  align-self: center;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: var(--space-2) 0;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+.backButton:hover {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.labelLink {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: var(--typo-label-small-font-size);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.labelLink:hover {
+  text-decoration: underline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+
+.labelAction {
+  font-size: var(--typo-label-small-font-size);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.labelAction:hover {
+  text-decoration: underline;
+}
+
+.submit {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+.error {
+  color: var(--color-error);
+  font-size: var(--typo-body-small-font-size);
+  background: var(--color-error-container);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.resendLink {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+
+.footer {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-outline-variant);
+  text-align: center;
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-on-surface-variant);
+}
+
+.link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .header {
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .title {
+    font-size: var(--typo-title-large-font-size);
+  }
+}

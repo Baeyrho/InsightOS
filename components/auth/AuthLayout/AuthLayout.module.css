@@ -1,0 +1,157 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+.brandPanel {
+  flex: 45;
+  background-color: var(--color-surface-container-low);
+  padding: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid var(--color-outline-variant);
+  text-align: center;
+}
+
+.brandContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.centeredLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logoBadge {
+  width: 40px;
+  height: 40px;
+  background: var(--color-on-background);
+  color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  font-size: var(--typo-title-medium-font-size);
+}
+
+.wordmark {
+  font-size: var(--typo-headline-small-font-size);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  display: block;
+  font-size: var(--typo-label-large-font-size);
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Glows */
+.glow1, .glow2, .glow3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.05;
+  background: var(--color-primary);
+  pointer-events: none;
+}
+
+.glow1 {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  right: -100px;
+}
+
+.glow2 {
+  width: 400px;
+  height: 400px;
+  bottom: -50px;
+  left: -100px;
+}
+
+.glow3 {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  left: 20%;
+}
+
+.formPanel {
+  flex: 55;
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.topNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.backHome {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--typo-label-medium-font-size);
+  color: var(--color-on-surface-variant);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.backHome:hover {
+  color: var(--color-primary);
+}
+
+.formWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+}
+
+.formWrapper > * {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .brandPanel {
+    display: none;
+  }
+  
+  .formPanel {
+    flex: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow1, .glow2, .glow3 {
+    display: none;
+  }
+}

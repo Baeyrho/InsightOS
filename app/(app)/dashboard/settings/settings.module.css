@@ -1,0 +1,312 @@
+.page {
+  padding: var(--space-8);
+  max-width: 900px;
+}
+
+.header {
+  margin-bottom: var(--space-8);
+}
+
+.title {
+  font-size: var(--typo-headline-medium-font-size);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.section {
+  background: var(--color-surface-container-low);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectionTitle {
+  font-size: var(--typo-title-large-font-size);
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.sectionDanger {
+  border-color: var(--color-error);
+}
+
+.sectionDanger .sectionHeader {
+  border-bottom-color: var(--color-error);
+}
+
+.sectionDanger .sectionTitle {
+  color: var(--color-error);
+}
+
+.field {
+  margin-bottom: var(--space-4);
+}
+
+.label {
+  display: block;
+  font-size: var(--typo-label-medium-font-size);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--typo-body-medium-font-size);
+  font-family: var(--font-sans);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+}
+
+.fieldError {
+  font-size: var(--typo-body-small-font-size);
+  color: var(--color-error);
+  margin: var(--space-1) 0 0;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.error {
+  font-size: var(--typo-body-small-font-size);
+  color: var(--color-error);
+  margin: var(--space-2) 0 0;
+}
+
+.success {
+  font-size: var(--typo-body-small-font-size);
+  color: var(--color-secondary);
+  margin: var(--space-2) 0 0;
+}
+
+/* Plan banner */
+.currentPlan {
+  margin-bottom: var(--space-6);
+}
+
+.planName {
+  font-size: var(--typo-title-medium-font-size);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-1);
+}
+
+.planDetails {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-1);
+}
+
+.planPrice {
+  font-size: var(--typo-title-large-font-size);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: var(--space-3) 0 0;
+}
+
+/* Usage bar */
+.usageSection {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.usageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.usageLabel {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.usageCount {
+  font-size: var(--typo-body-small-font-size);
+  color: var(--color-text-muted);
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: var(--color-surface-container-highest);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+  transition: width 0.3s ease;
+}
+
+.progressFillWarn {
+  background: var(--severity-high);
+}
+
+/* Plan cards grid */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.planCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+}
+
+.planCardCurrent {
+  border-color: var(--color-primary);
+  position: relative;
+}
+
+.planCardName {
+  font-size: var(--typo-title-medium-font-size);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--space-1);
+}
+
+.planCardPrice {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: var(--space-2) 0;
+}
+
+.planCardCurrency {
+  font-size: var(--typo-body-medium-font-size);
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.planCardPeriod {
+  font-size: var(--typo-body-small-font-size);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4);
+}
+
+.planCardFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-6);
+  flex: 1;
+}
+
+.planCardFeature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text);
+}
+
+.planCardFeatureIcon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.planCardBadge {
+  display: inline-block;
+  font-size: var(--typo-label-small-font-size);
+  font-weight: 600;
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-2);
+}
+
+/* Danger zone */
+.dangerText {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4);
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding: var(--space-4);
+  }
+
+  .section {
+    padding: var(--space-4);
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+
+  .formActions > * {
+    width: 100%;
+  }
+
+  .usageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+
+  .plansGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .billingRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .plansGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,220 @@
+/*  ═══════════════════════════════════════════════════════════
+ *  InsightOS Design Tokens
+ *  
+ *  This file is the single source of truth for styles.
+ *  It includes auto-generated MD3 roles and typography,
+ *  manually added non-color tokens, and developer aliases.
+ *  ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Dark-mode Color Roles (MD3 - DEFAULT) ────────────────── */
+  --color-primary: hsl(221, 83%, 53%);
+  --color-on-primary: hsl(219, 100%, 97%);
+  --color-primary-container: hsl(218, 100%, 33%);
+  --color-on-primary-container: hsl(230, 100%, 93%);
+  --color-secondary: hsl(155, 68%, 59%);
+  --color-on-secondary: hsl(159, 100%, 11%);
+  --color-secondary-container: hsl(160, 100%, 16%);
+  --color-on-secondary-container: hsl(153, 95%, 71%);
+  --color-tertiary: hsl(200, 100%, 74%);
+  --color-on-tertiary: hsl(196, 100%, 14%);
+  --color-tertiary-container: hsl(196, 100%, 20%);
+  --color-on-tertiary-container: hsl(203, 100%, 88%);
+  --color-error: hsl(6, 100%, 84%);
+  --color-on-error: hsl(357, 100%, 21%);
+  --color-error-container: hsl(355, 100%, 29%);
+  --color-on-error-container: hsl(6, 100%, 92%);
+  --color-background: hsl(214, 32%, 7%);
+  --color-on-background: hsl(218, 87%, 91%);
+  --color-surface: hsl(214, 32%, 7%);
+  --color-on-surface: hsl(218, 87%, 91%);
+  --color-surface-variant: hsl(210, 6%, 28%);
+  --color-on-surface-variant: hsl(210, 7%, 78%);
+  --color-outline: hsl(210, 4%, 57%);
+  --color-outline-variant: hsl(210, 6%, 28%);
+  --color-inverse-surface: hsl(218, 87%, 91%);
+  --color-inverse-on-surface: hsl(215, 32%, 20%);
+  --color-inverse-primary: hsl(217, 100%, 43%);
+  --color-surface-dim: hsl(214, 32%, 7%);
+  --color-surface-bright: hsl(215, 28%, 24%);
+  --color-surface-container-lowest: hsl(214, 21%, 5%);
+  --color-surface-container-low: hsl(214, 53%, 12%);
+  --color-surface-container: hsl(214, 49%, 14%);
+  --color-surface-container-high: hsl(215, 38%, 18%);
+  --color-surface-container-highest: hsl(215, 30%, 22%);
+
+  /* ── Developer Aliases ── */
+  --color-bg: var(--color-background);
+  --color-surface-el: var(--color-surface-container-low);
+  --color-border: var(--color-outline-variant);
+  --color-text: var(--color-on-surface);
+  --color-text-muted: var(--color-on-surface-variant);
+
+  /* ── Hover Aliases (Dark Mode - DEFAULT) ── */
+  --color-primary-hover: hsl(221, 83%, 63%);
+  --color-surface-hover: var(--color-surface-container-high);
+
+  /* ── Severity Scale (Mapped to MD3) ── */
+  --severity-critical: var(--color-error);
+  --severity-high: var(--color-error-container);
+  --severity-medium: var(--color-tertiary-container);
+  --severity-low: var(--color-secondary-container);
+
+  /* ── Non-Color Tokens (4px scale) ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', monospace;
+}
+
+[data-theme="light"] {
+  /* ── Light-mode Color Roles (MD3) ───────────────────────── */
+  --color-primary: hsl(221, 83%, 53%);
+  --color-on-primary: hsl(0, 0%, 100%);
+  --color-primary-container: hsl(230, 100%, 93%);
+  --color-on-primary-container: hsl(218, 100%, 33%);
+  --color-secondary: hsl(161, 100%, 21%);
+  --color-on-secondary: hsl(0, 0%, 100%);
+  --color-secondary-container: hsl(155, 68%, 59%);
+  --color-on-secondary-container: hsl(160, 100%, 16%);
+  --color-tertiary: hsl(195, 100%, 27%);
+  --color-on-tertiary: hsl(0, 0%, 100%);
+  --color-tertiary-container: hsl(200, 100%, 74%);
+  --color-on-tertiary-container: hsl(196, 100%, 20%);
+  --color-error: hsl(1, 77%, 53%);
+  --color-on-error: hsl(0, 0%, 100%);
+  --color-error-container: hsl(7, 100%, 97%);
+  --color-on-error-container: hsl(356, 90%, 39%);
+  --color-background: hsl(231, 100%, 99%);
+  --color-on-background: hsl(214, 53%, 12%);
+  --color-surface: hsl(231, 100%, 99%);
+  --color-on-surface: hsl(214, 53%, 12%);
+  --color-surface-variant: hsl(210, 14%, 89%);
+  --color-on-surface-variant: hsl(210, 6%, 28%);
+  --color-outline: hsl(207, 5%, 67%);
+  --color-outline-variant: hsl(210, 7%, 78%);
+  --color-inverse-surface: hsl(215, 32%, 20%);
+  --color-inverse-on-surface: hsl(220, 100%, 96%);
+  --color-inverse-primary: hsl(230, 100%, 93%);
+  --color-surface-dim: hsl(217, 62%, 88%);
+  --color-surface-bright: hsl(231, 100%, 99%);
+  --color-surface-container-lowest: hsl(0, 0%, 100%);
+  --color-surface-container-low: hsl(221, 100%, 97%);
+  --color-surface-container: hsl(221, 100%, 95%);
+  --color-surface-container-high: hsl(218, 100%, 93%);
+  --color-surface-container-highest: hsl(231, 100%, 95%);
+
+  /* ── Hover Aliases (Light Mode) ── */
+  --color-primary-hover: hsl(221, 83%, 43%);
+  --color-surface-hover: var(--color-surface-container);
+}
+
+/* ── Typography (MD3) ─────────────────────────────────────── */
+:root {
+  --typo-display-large-font-size: 3.5625rem;
+  --typo-display-large-line-height: 4rem;
+  --typo-display-large-font-weight: 400;
+  --typo-display-large-font-family: var(--font-sans);
+  --typo-display-large-letter-spacing: -0.015625rem;
+
+  --typo-display-medium-font-size: 2.8125rem;
+  --typo-display-medium-line-height: 3.25rem;
+  --typo-display-medium-font-weight: 400;
+  --typo-display-medium-font-family: var(--font-sans);
+  --typo-display-medium-letter-spacing: 0;
+
+  --typo-display-small-font-size: 2.25rem;
+  --typo-display-small-line-height: 2.75rem;
+  --typo-display-small-font-weight: 400;
+  --typo-display-small-font-family: var(--font-sans);
+  --typo-display-small-letter-spacing: 0;
+
+  --typo-headline-large-font-size: 2rem;
+  --typo-headline-large-line-height: 2.5rem;
+  --typo-headline-large-font-weight: 400;
+  --typo-headline-large-font-family: var(--font-sans);
+  --typo-headline-large-letter-spacing: 0;
+
+  --typo-headline-medium-font-size: 1.75rem;
+  --typo-headline-medium-line-height: 2.25rem;
+  --typo-headline-medium-font-weight: 400;
+  --typo-headline-medium-font-family: var(--font-sans);
+  --typo-headline-medium-letter-spacing: 0;
+
+  --typo-headline-small-font-size: 1.5rem;
+  --typo-headline-small-line-height: 2rem;
+  --typo-headline-small-font-weight: 400;
+  --typo-headline-small-font-family: var(--font-sans);
+  --typo-headline-small-letter-spacing: 0;
+
+  --typo-title-large-font-size: 1.375rem;
+  --typo-title-large-line-height: 1.75rem;
+  --typo-title-large-font-weight: 400;
+  --typo-title-large-font-family: var(--font-sans);
+  --typo-title-large-letter-spacing: 0;
+
+  --typo-title-medium-font-size: 1rem;
+  --typo-title-medium-line-height: 1.5rem;
+  --typo-title-medium-font-weight: 500;
+  --typo-title-medium-font-family: var(--font-sans);
+  --typo-title-medium-letter-spacing: 0.009375rem;
+
+  --typo-title-small-font-size: 0.875rem;
+  --typo-title-small-line-height: 1.25rem;
+  --typo-title-small-font-weight: 500;
+  --typo-title-small-font-family: var(--font-sans);
+  --typo-title-small-letter-spacing: 0.007142rem;
+
+  --typo-body-large-font-size: 1rem;
+  --typo-body-large-line-height: 1.5rem;
+  --typo-body-large-font-weight: 400;
+  --typo-body-large-font-family: var(--font-sans);
+  --typo-body-large-letter-spacing: 0.03125rem;
+
+  --typo-body-medium-font-size: 0.875rem;
+  --typo-body-medium-line-height: 1.25rem;
+  --typo-body-medium-font-weight: 400;
+  --typo-body-medium-font-family: var(--font-sans);
+  --typo-body-medium-letter-spacing: 0.017857rem;
+
+  --typo-body-small-font-size: 0.75rem;
+  --typo-body-small-line-height: 1rem;
+  --typo-body-small-font-weight: 400;
+  --typo-body-small-font-family: var(--font-sans);
+  --typo-body-small-letter-spacing: 0.033333rem;
+
+  --typo-label-large-font-size: 0.875rem;
+  --typo-label-large-line-height: 1.25rem;
+  --typo-label-large-font-weight: 500;
+  --typo-label-large-font-family: var(--font-sans);
+  --typo-label-large-letter-spacing: 0.007142rem;
+
+  --typo-label-medium-font-size: 0.75rem;
+  --typo-label-medium-line-height: 1rem;
+  --typo-label-medium-font-weight: 500;
+  --typo-label-medium-font-family: var(--font-sans);
+  --typo-label-medium-letter-spacing: 0.041666rem;
+
+  --typo-label-small-font-size: 0.6875rem;
+  --typo-label-small-line-height: 1rem;
+  --typo-label-small-font-weight: 500;
+  --typo-label-small-font-family: var(--font-sans);
+  --typo-label-small-letter-spacing: 0.045454rem;
+}

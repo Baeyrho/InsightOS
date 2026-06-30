@@ -1,0 +1,177 @@
+/*  ═══════════════════════════════════════════════════════════
+ *  InsightOS Design Tokens — auto-generated
+ *  Generated: 2026-06-10T17:50:16.126Z
+ *  Source:    color-tokens  ·  typography-tokens.json
+ *
+ *  DO NOT EDIT MANUALLY — regenerate with:
+ *    node generate-tokens.js
+ *  ═══════════════════════════════════════════════════════════ */
+
+/* ── Light-mode Color Roles ───────────────────────────────── */
+:root {
+  --color-primary: hsl(221, 83%, 53%);
+  --color-on-primary: hsl(0, 0%, 100%);
+  --color-primary-container: hsl(230, 100%, 93%);
+  --color-on-primary-container: hsl(218, 100%, 33%);
+  --color-secondary: hsl(161, 100%, 21%);
+  --color-on-secondary: hsl(0, 0%, 100%);
+  --color-secondary-container: hsl(155, 68%, 59%);
+  --color-on-secondary-container: hsl(160, 100%, 16%);
+  --color-tertiary: hsl(195, 100%, 27%);
+  --color-on-tertiary: hsl(0, 0%, 100%);
+  --color-tertiary-container: hsl(200, 100%, 74%);
+  --color-on-tertiary-container: hsl(196, 100%, 20%);
+  --color-error: hsl(1, 77%, 53%);
+  --color-on-error: hsl(0, 0%, 100%);
+  --color-error-container: hsl(7, 100%, 97%);
+  --color-on-error-container: hsl(356, 90%, 39%);
+  --color-background: hsl(231, 100%, 99%);
+  --color-on-background: hsl(214, 53%, 12%);
+  --color-surface: hsl(231, 100%, 99%);
+  --color-on-surface: hsl(214, 53%, 12%);
+  --color-surface-variant: hsl(210, 14%, 89%);
+  --color-on-surface-variant: hsl(210, 6%, 28%);
+  --color-outline: hsl(207, 5%, 67%);
+  --color-outline-variant: hsl(210, 7%, 78%);
+  --color-inverse-surface: hsl(215, 32%, 20%);
+  --color-inverse-on-surface: hsl(220, 100%, 96%);
+  --color-inverse-primary: hsl(230, 100%, 93%);
+  --color-surface-dim: hsl(217, 62%, 88%);
+  --color-surface-bright: hsl(231, 100%, 99%);
+  --color-surface-container-lowest: hsl(0, 0%, 100%);
+  --color-surface-container-low: hsl(221, 100%, 97%);
+  --color-surface-container: hsl(221, 100%, 95%);
+  --color-surface-container-high: hsl(218, 100%, 93%);
+  --color-surface-container-highest: hsl(231, 100%, 95%);
+}
+
+/* ── Dark-mode Color Roles ────────────────────────────────── */
+[data-theme="dark"] {
+  --color-primary: hsl(221, 83%, 53%);
+  --color-on-primary: hsl(219, 100%, 23%);
+  --color-primary-container: hsl(218, 100%, 33%);
+  --color-on-primary-container: hsl(230, 100%, 93%);
+  --color-secondary: hsl(155, 68%, 59%);
+  --color-on-secondary: hsl(159, 100%, 11%);
+  --color-secondary-container: hsl(160, 100%, 16%);
+  --color-on-secondary-container: hsl(153, 95%, 71%);
+  --color-tertiary: hsl(200, 100%, 74%);
+  --color-on-tertiary: hsl(196, 100%, 14%);
+  --color-tertiary-container: hsl(196, 100%, 20%);
+  --color-on-tertiary-container: hsl(203, 100%, 88%);
+  --color-error: hsl(6, 100%, 84%);
+  --color-on-error: hsl(357, 100%, 21%);
+  --color-error-container: hsl(355, 100%, 29%);
+  --color-on-error-container: hsl(6, 100%, 92%);
+  --color-background: hsl(214, 32%, 7%);
+  --color-on-background: hsl(218, 87%, 91%);
+  --color-surface: hsl(214, 32%, 7%);
+  --color-on-surface: hsl(218, 87%, 91%);
+  --color-surface-variant: hsl(210, 6%, 28%);
+  --color-on-surface-variant: hsl(210, 7%, 78%);
+  --color-outline: hsl(210, 4%, 57%);
+  --color-outline-variant: hsl(210, 6%, 28%);
+  --color-inverse-surface: hsl(218, 87%, 91%);
+  --color-inverse-on-surface: hsl(215, 32%, 20%);
+  --color-inverse-primary: hsl(217, 100%, 43%);
+  --color-surface-dim: hsl(214, 32%, 7%);
+  --color-surface-bright: hsl(215, 28%, 24%);
+  --color-surface-container-lowest: hsl(214, 21%, 5%);
+  --color-surface-container-low: hsl(214, 53%, 12%);
+  --color-surface-container: hsl(214, 49%, 14%);
+  --color-surface-container-high: hsl(215, 38%, 18%);
+  --color-surface-container-highest: hsl(215, 30%, 22%);
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+:root {
+  --typo-display-large-font-size: 64px;
+  --typo-display-large-line-height: 96px;
+  --typo-display-large-font-weight: 400;
+  --typo-display-large-font-family: 'Inter', sans-serif;
+  --typo-display-large-letter-spacing: -1.92px;
+
+  --typo-display-medium-font-size: 48px;
+  --typo-display-medium-line-height: 72px;
+  --typo-display-medium-font-weight: 400;
+  --typo-display-medium-font-family: 'Inter', sans-serif;
+  --typo-display-medium-letter-spacing: -1.44px;
+
+  --typo-display-small-font-size: 40px;
+  --typo-display-small-line-height: 60px;
+  --typo-display-small-font-weight: 400;
+  --typo-display-small-font-family: 'Inter', sans-serif;
+  --typo-display-small-letter-spacing: -1.2px;
+
+  --typo-headline-large-font-size: 40px;
+  --typo-headline-large-line-height: 60px;
+  --typo-headline-large-font-weight: 500;
+  --typo-headline-large-font-family: 'Inter', sans-serif;
+  --typo-headline-large-letter-spacing: -0.8px;
+
+  --typo-headline-medium-font-size: 36px;
+  --typo-headline-medium-line-height: 54px;
+  --typo-headline-medium-font-weight: 400;
+  --typo-headline-medium-font-family: 'Inter', sans-serif;
+  --typo-headline-medium-letter-spacing: -0.54px;
+
+  --typo-headline-small-font-size: 32px;
+  --typo-headline-small-line-height: 48px;
+  --typo-headline-small-font-weight: 400;
+  --typo-headline-small-font-family: 'Inter', sans-serif;
+  --typo-headline-small-letter-spacing: -0.48px;
+
+  --typo-title-large-font-size: 30px;
+  --typo-title-large-line-height: 45px;
+  --typo-title-large-font-weight: 400;
+  --typo-title-large-font-family: 'Inter', sans-serif;
+  --typo-title-large-letter-spacing: -0.3px;
+
+  --typo-title-medium-font-size: 24px;
+  --typo-title-medium-line-height: 36px;
+  --typo-title-medium-font-weight: 500;
+  --typo-title-medium-font-family: 'Inter', sans-serif;
+  --typo-title-medium-letter-spacing: -0.12px;
+
+  --typo-title-small-font-size: 22px;
+  --typo-title-small-line-height: 33px;
+  --typo-title-small-font-weight: 500;
+  --typo-title-small-font-family: 'Inter', sans-serif;
+  --typo-title-small-letter-spacing: -0.11px;
+
+  --typo-body-large-font-size: 24px;
+  --typo-body-large-line-height: 36px;
+  --typo-body-large-font-weight: 400;
+  --typo-body-large-font-family: 'Inter', sans-serif;
+  --typo-body-large-letter-spacing: -0.12px;
+
+  --typo-body-medium-font-size: 22px;
+  --typo-body-medium-line-height: 33px;
+  --typo-body-medium-font-weight: 400;
+  --typo-body-medium-font-family: 'Inter', sans-serif;
+  --typo-body-medium-letter-spacing: -0.11px;
+
+  --typo-body-small-font-size: 20px;
+  --typo-body-small-line-height: 30px;
+  --typo-body-small-font-weight: 400;
+  --typo-body-small-font-family: 'Inter', sans-serif;
+  --typo-body-small-letter-spacing: -0.1px;
+
+  --typo-label-large-font-size: 22px;
+  --typo-label-large-line-height: 33px;
+  --typo-label-large-font-weight: 500;
+  --typo-label-large-font-family: 'Inter', sans-serif;
+  --typo-label-large-letter-spacing: -0.11px;
+
+  --typo-label-medium-font-size: 20px;
+  --typo-label-medium-line-height: 30px;
+  --typo-label-medium-font-weight: 500;
+  --typo-label-medium-font-family: 'Inter', sans-serif;
+  --typo-label-medium-letter-spacing: -0.1px;
+
+  --typo-label-small-font-size: 16px;
+  --typo-label-small-line-height: 24px;
+  --typo-label-small-font-weight: 500;
+  --typo-label-small-font-family: 'Inter', sans-serif;
+  --typo-label-small-letter-spacing: -0.016px;
+}

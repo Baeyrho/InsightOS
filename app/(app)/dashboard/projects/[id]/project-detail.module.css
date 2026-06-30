@@ -1,0 +1,328 @@
+.page {
+  padding: var(--space-8);
+  max-width: 1200px;
+}
+
+.topBar {
+  margin-bottom: var(--space-4);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-8);
+  gap: var(--space-6);
+}
+
+.title {
+  font-size: var(--typo-headline-medium-font-size);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.description {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.metaCard {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.metaLabel {
+  font-size: var(--typo-label-small-font-size);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metaValue {
+  font-size: var(--typo-title-medium-font-size);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.section {
+  margin-bottom: var(--space-8);
+}
+
+.intakePortal {
+  width: 100%;
+  margin-bottom: var(--space-2);
+}
+
+.descriptionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-4);
+}
+
+.researchInputsSubtitle {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.analysisActions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: var(--typo-title-large-font-size);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.researchInputsCard {
+  padding: var(--space-4);
+}
+
+.researchInputsEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-10) var(--space-4);
+}
+
+.emptyText {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text-muted);
+  margin: 0;
+  text-align: center;
+}
+
+.artifactList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.artifactCard {
+  padding: var(--space-4);
+}
+
+.artifactHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.artifactTitle {
+  font-size: var(--typo-title-medium-font-size) !important;
+}
+
+.analysisCard {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.analysisStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.analysisDate {
+  font-size: var(--typo-body-small-font-size);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.analysisHint {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.analysisError {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-error, #e11d48);
+  margin: var(--space-1) 0 0;
+}
+
+.insightGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-4);
+}
+
+.exportCard {
+  padding: var(--space-4);
+}
+
+.exportText {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.exportHistory {
+  margin-top: var(--space-4);
+}
+
+.historyTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--typo-title-small-font-size);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.table {
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--color-surface-container-low);
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-4);
+}
+
+.tableHeader .tableCell {
+  font-size: var(--typo-label-small-font-size);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-4);
+  border-top: 1px solid var(--color-outline-variant);
+  transition: background-color 0.1s ease;
+}
+
+.tableRow:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.tableCell {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+}
+
+.artifactBadgeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.deleteArtifactButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.deleteArtifactButton:hover {
+  color: var(--color-error);
+}
+
+@media (max-width: 1023px) {
+  .metaGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .analysisActions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding: var(--space-4);
+  }
+
+  .metaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .descriptionRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .researchInputsCard {
+    padding: var(--space-3);
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .analysisActions {
+    flex-wrap: wrap;
+  }
+
+  .artifactHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}

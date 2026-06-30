@@ -1,0 +1,101 @@
+.card {
+  padding: var(--space-4);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: var(--typo-title-medium-font-size);
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.badge {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--typo-label-small-font-size);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.severityCritical { background-color: var(--severity-critical); color: var(--color-on-error); }
+.severityHigh { background-color: var(--severity-high); color: var(--color-on-error-container); }
+.severityMedium { background-color: var(--severity-medium); color: var(--color-on-tertiary-container); }
+.severityLow { background-color: var(--severity-low); color: var(--color-on-secondary-container); }
+
+.description {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-on-surface-variant);
+  line-height: 1.5;
+}
+
+.evidence {
+  font-size: var(--typo-body-small-font-size);
+  color: var(--color-text-muted);
+  font-style: italic;
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--color-outline-variant);
+}
+
+.rejected {
+  opacity: 0.45;
+  border-color: var(--color-outline);
+}
+
+.statusBadge {
+  font-size: var(--typo-label-small-font-size);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.statusAccepted {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+.statusRejected {
+  background-color: var(--color-error-container);
+  color: var(--color-on-error-container);
+}
+
+.statusNeedsReview {
+  background-color: var(--color-tertiary-container);
+  color: var(--color-on-tertiary-container);
+}
+
+.statusPending {
+  background-color: var(--color-surface-container-high);
+  color: var(--color-on-surface-variant);
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .headerRight {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

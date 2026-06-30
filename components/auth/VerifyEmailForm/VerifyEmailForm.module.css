@@ -1,0 +1,93 @@
+.authContainer {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--space-8);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.logoBadge {
+  width: 40px;
+  height: 40px;
+  background: var(--color-on-background);
+  color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  font-size: var(--typo-title-medium-font-size);
+}
+
+.title {
+  font-size: var(--typo-headline-small-font-size);
+  font-weight: 700;
+  color: var(--color-on-background);
+  letter-spacing: -0.01em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.description {
+  font-size: var(--typo-body-large-font-size);
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+}
+
+.actionGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.actionGroup p {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-on-surface-variant);
+}
+
+.resendButton {
+  width: fit-content;
+}
+
+.footer {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-outline-variant);
+  text-align: center;
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-on-surface-variant);
+}
+
+.link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .authContainer {
+    padding: var(--space-4);
+  }
+
+  .header {
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+}
