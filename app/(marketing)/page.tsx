@@ -22,12 +22,6 @@ export default function LandingPage() {
             <span className={styles.wordmark}>InsightOS</span>
           </div>
           <nav className={styles.nav}>
-            <Link href="/auth?mode=login" className={`${btnStyles.button} ${btnStyles.outline}`}>
-              Sign in
-            </Link>
-            <Link href="/auth?mode=register" className={`${btnStyles.button} ${btnStyles.primary}`}>
-              Get started
-            </Link>
             <ThemeToggle />
           </nav>
         </div>
