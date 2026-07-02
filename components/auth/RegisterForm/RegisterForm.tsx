@@ -7,7 +7,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/Button/Button"
 import { Input } from "@/components/ui/Input/Input"
 import { PasswordInput } from "@/components/ui/Input/PasswordInput"
-import { Check, X } from "lucide-react"
+import { PasswordRequirements } from "@/components/auth/PasswordRequirements/PasswordRequirements"
 import { RegisterSchema, type RegisterInput } from "@/lib/validations/auth"
 import styles from "./RegisterForm.module.css"
 
@@ -121,11 +121,6 @@ export function RegisterForm() {
         />
         <PasswordInput
           label="Enter Password"
-          labelAction={
-            <Link href="/auth?mode=forgot-password" className={styles.labelAction}>
-              Forgot your password?
-            </Link>
-          }
           name="password"
           required
           autoComplete="new-password"
@@ -135,6 +130,7 @@ export function RegisterForm() {
           aria-describedby={errors.password ? "password-error" : undefined}
           aria-invalid={!!errors.password}
         />
+        {!errors.password && <PasswordRequirements value={password} />}
         
         {serverError && (
           <p className={styles.error} role="alert">

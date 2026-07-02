@@ -7,6 +7,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/Button/Button"
 import { Input } from "@/components/ui/Input/Input"
 import { PasswordInput } from "@/components/ui/Input/PasswordInput"
+import { PasswordRequirements } from "@/components/auth/PasswordRequirements/PasswordRequirements"
 import { LoginSchema, type LoginInput } from "@/lib/validations/auth"
 import styles from "./LoginForm.module.css"
 
@@ -112,6 +113,7 @@ export function LoginForm() {
           aria-describedby={errors.password ? "password-error" : undefined}
           aria-invalid={!!errors.password}
         />
+        {!errors.password && <PasswordRequirements value={password} />}
         
         {serverError && (
           <p className={styles.error} role="alert">

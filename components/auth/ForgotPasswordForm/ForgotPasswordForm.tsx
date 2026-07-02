@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/Button/Button"
 import { Input } from "@/components/ui/Input/Input"
 import { PasswordInput } from "@/components/ui/Input/PasswordInput"
-import { Check, X } from "lucide-react"
+import { PasswordRequirements } from "@/components/auth/PasswordRequirements/PasswordRequirements"
 import { 
   ForgotPasswordRequestSchema, 
   PasswordResetSchema,
@@ -171,6 +171,7 @@ export function ForgotPasswordForm() {
             onChange={(e) => setPassword(e.target.value)}
             error={errors.password}
           />
+          {!errors.password && <PasswordRequirements value={password} />}
           
           <PasswordInput
             label="Confirm Password"

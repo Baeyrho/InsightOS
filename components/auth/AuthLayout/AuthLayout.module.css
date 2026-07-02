@@ -148,6 +148,41 @@
   .formPanel {
     flex: 1;
   }
+
+  .topNav {
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .formWrapper {
+    align-items: flex-start;
+    padding-top: 5rem;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+    padding-bottom: var(--space-8);
+  }
+
+  .formWrapper > * {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .brandPanel {
+    flex: 35;
+    padding: var(--space-8);
+  }
+
+  .formPanel {
+    flex: 65;
+  }
+
+  .formWrapper {
+    padding: var(--space-6);
+  }
+
+  .formWrapper > * {
+    max-width: 480px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
