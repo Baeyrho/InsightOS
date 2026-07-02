@@ -23,9 +23,18 @@ export default async function RootLayout({
   const themeCookie = cookieStore.get("insightos-theme");
   const theme = (themeCookie?.value as "light" | "dark") || "dark";
 
+  const themeScript = `
+    (function() {
+      var c = document.cookie.match(/(?:^|;\\s*)insightos-theme=([^;]*)/);
+      var theme = c ? c[1] : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })()
+  `
+
   return (
     <html lang="en" data-theme={theme} suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <ThemeProvider initialTheme={theme}>{children}</ThemeProvider>
       </body>
     </html>
