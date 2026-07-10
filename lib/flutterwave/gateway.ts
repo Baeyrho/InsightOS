@@ -33,7 +33,13 @@ export class FlutterwaveGateway implements PaymentGateway {
 
     const { amount, currency } = PlanRegistry.amount(tier)
     const txRef = `insightos_${userId}_${Date.now()}`
-    const callbackUrl = `${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/api/v1/billing/callback`
+    // Include tier + tx_ref as query params so the callback handler has a
+    // reconciliation hint. payment_plan is NOT forwarded in the POST body because
+    // Flutterwave silently removes all non-card payment options when payment_plan
+    // is present in a hosted checkout request. The plan is reconciled server-side
+    // by the verify API response (which returns payment_plan) and by the webhook.
+    const callbackBase = `${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/api/v1/billing/callback`
+    const callbackUrl = `${callbackBase}?tier=${encodeURIComponent(tier)}&tx_ref=${encodeURIComponent(txRef)}`
 
     const res = await fetch(`${this.baseUrl}/payments`, {
       method: "POST",
@@ -46,7 +52,6 @@ export class FlutterwaveGateway implements PaymentGateway {
         amount,
         currency,
         redirect_url: callbackUrl,
-        payment_plan: planId,
         customer: { email, name: name || undefined },
         customizations: {
           title: "InsightOS",

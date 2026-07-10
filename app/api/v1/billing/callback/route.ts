@@ -27,6 +27,9 @@ export async function GET(req: NextRequest) {
   const status = searchParams.get("status") ?? ""
   const transactionId = searchParams.get("transaction_id") ?? ""
   const txRef = searchParams.get("tx_ref") ?? ""
+  // tier is appended by our own gateway as a reconciliation hint
+  // when payment_plan is not in the checkout payload (to preserve all payment options)
+  const tierHint = searchParams.get("tier") ?? ""
 
   const failureUrl = new URL("/dashboard/settings", req.nextUrl.origin)
   failureUrl.searchParams.set("payment", "failed")
@@ -68,7 +71,8 @@ export async function GET(req: NextRequest) {
       )
       redirectUrl = failureUrl
     } else {
-      // Resolve the plan from the payment_plan id or from amount/currency.
+      // Resolve the plan from the payment_plan id, then amount/currency, then
+      // fall back to the tier hint we embedded in the redirect_url.
       const flwPlanId = String(verifiedData.payment_plan ?? "")
       let planTier = flwPlanId ? PlanRegistry.fromFlwPlanId(flwPlanId) : undefined
 
@@ -76,6 +80,10 @@ export async function GET(req: NextRequest) {
         const verifiedAmount = Number(verifiedData.amount ?? 0)
         const verifiedCurrency = String(verifiedData.currency ?? "")
         planTier = PlanRegistry.fromAmount(verifiedAmount, verifiedCurrency) ?? undefined
+      }
+
+      if (!planTier && (tierHint === "PRO" || tierHint === "TEAM")) {
+        planTier = tierHint
       }
 
       // Resolve the customer email from the verified payload.
