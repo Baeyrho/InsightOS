@@ -17,11 +17,18 @@ function formatPrice(price: number, currency: string): string {
   return `${currency} ${price}`
 }
 
-export default async function SettingsPage() {
+interface SettingsPageProps {
+  searchParams: Promise<{ payment?: string }>
+}
+
+export default async function SettingsPage({ searchParams }: SettingsPageProps) {
   const session = await auth()
   if (!session?.user?.id) {
     redirect("/auth")
   }
+
+  const { payment } = await searchParams
+  const paymentStatus = payment === "success" ? "success" : payment === "failed" ? "failed" : null
 
   const userId = session.user.id
 
@@ -83,6 +90,34 @@ export default async function SettingsPage() {
         <h1 className={styles.title}>Settings</h1>
         <p className={styles.subtitle}>Manage your account and subscription</p>
       </header>
+
+      {paymentStatus === "success" && (
+        <div role="alert" style={{
+          padding: "var(--space-3) var(--space-4)",
+          borderRadius: "var(--radius-md)",
+          background: "color-mix(in srgb, var(--color-success) 12%, transparent)",
+          border: "1px solid var(--color-success)",
+          color: "var(--color-success)",
+          marginBottom: "var(--space-4)",
+          fontSize: "var(--text-sm)",
+        }}>
+          ✓ Payment successful — your plan has been upgraded.
+        </div>
+      )}
+
+      {paymentStatus === "failed" && (
+        <div role="alert" style={{
+          padding: "var(--space-3) var(--space-4)",
+          borderRadius: "var(--radius-md)",
+          background: "color-mix(in srgb, var(--color-danger) 12%, transparent)",
+          border: "1px solid var(--color-danger)",
+          color: "var(--color-danger)",
+          marginBottom: "var(--space-4)",
+          fontSize: "var(--text-sm)",
+        }}>
+          ✕ Payment was not completed. Please try again or contact support.
+        </div>
+      )}
 
       <div className={styles.section}>
         <div className={styles.sectionHeader}>

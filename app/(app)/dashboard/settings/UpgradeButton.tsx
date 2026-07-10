@@ -1,6 +1,5 @@
 "use client"
 
-import { useRouter } from "next/navigation"
 import { createCheckoutSession } from "@/lib/actions/billing"
 import { Button } from "@/components/ui/Button/Button"
 import { useState } from "react"
@@ -11,7 +10,6 @@ interface UpgradeButtonProps {
 }
 
 export function UpgradeButton({ tier, currentTier }: UpgradeButtonProps) {
-  const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -22,7 +20,9 @@ export function UpgradeButton({ tier, currentTier }: UpgradeButtonProps) {
     try {
       const result = await createCheckoutSession(tier)
       if (result?.checkoutUrl) {
-        router.push(result.checkoutUrl)
+        // Use window.location.href — not router.push — because router.push is
+        // for internal SPA navigation only and will mangle an external URL.
+        window.location.href = result.checkoutUrl
       } else {
         setError("Failed to create checkout session")
       }

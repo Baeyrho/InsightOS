@@ -33,7 +33,7 @@ export class FlutterwaveGateway implements PaymentGateway {
 
     const { amount, currency } = PlanRegistry.amount(tier)
     const txRef = `insightos_${userId}_${Date.now()}`
-    const callbackUrl = `${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/dashboard/settings`
+    const callbackUrl = `${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/api/v1/billing/callback`
 
     const res = await fetch(`${this.baseUrl}/payments`, {
       method: "POST",
@@ -46,6 +46,7 @@ export class FlutterwaveGateway implements PaymentGateway {
         amount,
         currency,
         redirect_url: callbackUrl,
+        payment_plan: planId,
         customer: { email, name: name || undefined },
         customizations: {
           title: "InsightOS",
